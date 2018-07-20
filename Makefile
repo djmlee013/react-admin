@@ -11,6 +11,9 @@ run: run-simple
 run-simple: ## run the simple example
 	@cd examples/simple && yarn start
 
+run-defect: ## run the simple example
+	@cd examples/defect-board && yarn start
+
 run-tutorial: build ## run the tutorial example
 	@cd examples/tutorial && yarn start
 
