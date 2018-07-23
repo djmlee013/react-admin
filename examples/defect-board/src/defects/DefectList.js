@@ -21,6 +21,8 @@ import {
     translate,
 } from 'react-admin'; // eslint-disable-line import/no-unresolved
 
+import getNotifications from '../github';
+
 const styles = theme => ({
     title: {
         maxWidth: '20em',
@@ -41,6 +43,7 @@ const PostList = withStyles(styles)(({ classes, ...props }) => (
         {...props}
         sort={{ field: 'published_at', order: 'DESC' }}
     >
+        {getNotifications()}
         <Responsive
             small={
                 <SimpleList
